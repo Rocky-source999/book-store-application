@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import BookItem from '../BookItem/BookItem'
 import Header from '../Header/header'
 import { useEffect, useState } from 'react'
-import { Oval } from 'react-loader-spinner'
+import { RotatingLines } from 'react-loader-spinner'
 import { IoSearchOutline } from 'react-icons/io5'
 import "./BookList.css"
 
@@ -24,7 +24,7 @@ const BookList = () => {
 
   const renderLoadingView=()=>(
       <div style={{display:"flex",height:"100vh",justifyContent:"center",alignItems:"center"}}>
-        <Oval/>
+        <RotatingLines/>
       </div>
     ) 
 
