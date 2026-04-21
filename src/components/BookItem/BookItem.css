@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    text-decoration: none;
+    font-family: roboto;
+    cursor: default;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    border-radius: 10px;
+    border: 1px solid rgba(92, 112, 126, 0.3);
+    max-height: 350px;
+    border-width: 1px;
+    padding: 50px 40px;
+    width: 100%;
+    
+}
+.card img{
+    width: 200px;
+    height: 250px;
+    border-radius: 2px;
+}
+.card-text{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: black;
+}
+.card-text h1{
+    color: #012e4a;
+}
+.card-text h1:hover{
+    color: orangered;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.card-text h3{
+    color: #036280;
+    font-weight: bold;
+}
+.card-text p{
+    color: #4f536c;
+    line-height: 25px;
+    font-weight: 501;
+}
+.stars-cont{
+    color: #FFA900;
+}
+.button-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.button-icon button {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 45px;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  color: #036280;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* flowing layer */
+.button-icon button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: orangered;
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+/* hover effect */
+.button-icon button:hover::before {
+  width: 100%;
+}
+
+.button-icon button:hover {
+  color: white;
+  cursor: pointer;
+}
+.icons-cont{
+    display: flex;
+    gap: 10px;
+}
+.icon-bg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(92, 112, 126, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.icon-bg:hover{
+    background-color: orangered;
+    color: #fff;
+}
+.iconic{
+    cursor: pointer;
+}
