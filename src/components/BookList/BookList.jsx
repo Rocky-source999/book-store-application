@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import BookItem from '../BookItem/BookItem'
 import Header from '../Header/header'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { RotatingLines } from 'react-loader-spinner'
 import { IoSearchOutline } from 'react-icons/io5'
 import "./BookList.css"
@@ -10,6 +10,7 @@ const BookList = () => {
   const [bookList,setBookList]=useState([])
   const [isLoading, setIsLoading]=useState(true)
   const [userInput, setUserInput]=useState("")
+  const inputRef=useRef()
 
   useEffect(()=>{
     const getBookList=async()=>{
@@ -36,20 +37,25 @@ const BookList = () => {
       return books.name.toLowerCase().includes(userInput.toLowerCase())
     })
 
+    const search=()=>{
+      inputRef.current.focus()
+    }
+
 
     return (
       <div>
         <Link to="/books">
           <div className='search-input-cont'>
             <button className='search-btn'>
-              <IoSearchOutline className='search-icon'/>
+              <IoSearchOutline className='search-icon' onClick={search}/>
             </button>
             <input type='search'
               placeholder='Search Books'
               className='search-input'
               id='searchInput'
               value={userInput}
-              onChange={onChangeSearchInput}/>
+              onChange={onChangeSearchInput} 
+              ref={inputRef}/>
           </div>
           <BookItem books={bookList} searchData={searchBooks}/>
         </Link>

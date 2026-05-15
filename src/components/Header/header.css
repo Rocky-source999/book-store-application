@@ -77,9 +77,6 @@ nav{
     font-size: 25px;
     transition: all 0.3s linear;
 }
-.red{
-    color: red;
-}
 .icon:hover{
     transform: scale(1.2);
     cursor: pointer;

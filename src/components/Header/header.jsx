@@ -1,7 +1,7 @@
 import {Link} from "react-router"
 import "./header.css"
 import { FaCartShopping } from "react-icons/fa6"
-import { MdOutlineFavoriteBorder, MdFavorite } from "react-icons/md"
+import { MdFavorite } from "react-icons/md"
 import { VscAccount } from "react-icons/vsc"
 import { useState } from "react"
 
@@ -25,8 +25,8 @@ const Header=()=>{
                     <div className="icons-bg">
                         <FaCartShopping className="icon"/>
                     </div>
-                    <div className="icons-bg" onClick={() => setLiked(!liked)}>
-                        {liked ? (<MdFavorite className="icon red" />) : (<MdOutlineFavoriteBorder className="icon" />)}
+                    <div className="icons-bg">
+                        <MdFavorite className="icon" />
                     </div>
                     <div className="icons-bg">
                         <VscAccount className="icon"/>

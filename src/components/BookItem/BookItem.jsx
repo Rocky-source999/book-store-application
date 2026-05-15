@@ -2,7 +2,6 @@ import { FaStarHalfAlt } from "react-icons/fa"
 import { FaCartShopping, FaStar } from "react-icons/fa6"
 import { IoMdShuffle } from "react-icons/io"
 import { MdFavoriteBorder, MdOutlineRemoveRedEye } from "react-icons/md"
-import {Link} from 'react-router-dom'
 import "./BookItem.css"
 
 const BookItem = ({books,searchData}) => {
